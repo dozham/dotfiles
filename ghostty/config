@@ -46,10 +46,10 @@ font-size = 15
 # theme = catppuccin-<frappe|mocha|macchiato|latte>.conf
 theme = catppuccin-mocha.conf
 
-keybind = super+ctrl+down=resize_split:down,100
-keybind = super+ctrl+left=resize_split:left,100
-keybind = super+ctrl+up=resize_split:up,100
-keybind = super+ctrl+right=resize_split:right,100
+keybind = cmd+shift+down=resize_split:down,200
+keybind = cmd+shift+left=resize_split:left,200
+keybind = cmd+shift+up=resize_split:up,200
+keybind = cmd+shift+right=resize_split:right,200
 
 keybind = ctrl+l=goto_split:right
 keybind = ctrl+j=goto_split:down
