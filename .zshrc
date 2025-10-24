@@ -40,6 +40,7 @@ alias icat="kitten icat"
 alias cat=bat
 alias cl=clear
 alias cls=clear
+alias u="uv run"
 
 # Setup direnv 
 eval "$(direnv hook zsh)"
@@ -64,3 +65,48 @@ if [ -f '/Users/hosseinjafari/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/h
 if [ -f '/Users/hosseinjafari/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hosseinjafari/google-cloud-sdk/completion.zsh.inc'; fi
 
 # zprof
+
+# Claude code configuration
+# Enable Vertex AI integration
+export CLAUDE_CODE_USE_VERTEX=1
+export CLOUD_ML_REGION=global #europe-west1
+export ANTHROPIC_VERTEX_PROJECT_ID=st-claude-dev-5cf7
+
+# # Optional: Disable prompt caching if needed
+# export DISABLE_PROMPT_CACHING=1
+
+# Optional: Override regions for specific models
+# export VERTEX_REGION_CLAUDE_3_5_HAIKU=us-central1
+# export VERTEX_REGION_CLAUDE_3_5_SONNET=us-east5
+# export VERTEX_REGION_CLAUDE_3_7_SONNET=us-east5
+# export VERTEX_REGION_CLAUDE_4_0_OPUS=europe-west4
+# # export VERTEX_REGION_CLAUDE_4_0_SONNET=us-east5
+# export VERTEX_REGION_CLAUDE_4_1_OPUS=europe-west4
+#
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export EDITOR=nvim
+export VISUAL=nvim
+export KUBE_EDITOR=nvim
+
+
+# Add kubernetes autocomplete
+source <(kubectl completion zsh)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/Users/hosseinjafari/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/hosseinjafari/miniconda/etc/profile.d/conda.sh" ]; then
+#         . "/Users/hosseinjafari/miniconda/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/hosseinjafari/miniconda/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit

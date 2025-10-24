@@ -42,9 +42,6 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-# Change default shell to fish
-command = /opt/homebrew/bin/fish --login --interactive
-
 font-size = 15
 # theme = catppuccin-<frappe|mocha|macchiato|latte>.conf
 theme = catppuccin-mocha.conf
@@ -60,6 +57,5 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+k=goto_split:up
 
 macos-titlebar-style = tabs
-# shell-integration = zsh
+shell-integration = zsh
 
-keybind = shift+enter=text:\n
