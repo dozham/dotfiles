@@ -15,14 +15,12 @@
 
 # My aliases
 alias cd='z'
-alias vim=nvim
-alias vi=nvim
-alias e=nvim
-alias k=kubectl
+alias vim='nvim'
+alias vi='nvim'
+alias e='nvim'
+alias k='kubectl'
 alias icat="kitten icat"
-alias cat=bat
-alias cl=clear
-alias cls=clear
+alias cat='bat'
 
 # Claude code configuration
 # Enable Vertex AI integration
@@ -36,3 +34,13 @@ direnv hook fish | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/hosseinjafari/google-cloud-sdk/path.fish.inc' ]; . '/Users/hosseinjafari/google-cloud-sdk/path.fish.inc'; end
+
+# Add krew to PATH
+set -gx PATH $PATH $HOME/.krew/bin
+
+export EDITOR=nvim
+export VISUAL=nvim
+export KUBE_EDITOR=nvim
+
+# Add kubernetes autocomplete
+kubectl completion fish | source
