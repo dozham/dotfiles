@@ -44,3 +44,19 @@ export KUBE_EDITOR=nvim
 
 # Add kubernetes autocomplete
 kubectl completion fish | source
+
+
+# For Aider
+# export OPENAI_API_BASE=https://api.githubcopilot.com
+# export OPENAI_API_KEY=
+
+
+# pnpm
+export PNPM_HOME="/Users/hosseinjafari/Library/pnpm"
+set -gx PATH $PATH $PNPM_HOME
+
+
+# #>>> conda initialize >>>
+#  # !! Contents within this block are managed by 'conda init' !!
+#  eval /Users/hosseinjafari/miniconda/bin/conda "shell.fish" "hook" $argv | source
+#  # <<< conda initialize <<<
