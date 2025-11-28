@@ -854,8 +854,8 @@ require('lazy').setup({
           -- FloatBorder = { bg = '#FFFFFF', fg = '#FFFFFF' },
           --
           DiagnosticVirtualTextWarn = {
-            fg = '#4b5750',
-            italic = true,
+            fg = '#405761', -- '#6b6456',
+            -- bold = true,
           },
         }
       end,
