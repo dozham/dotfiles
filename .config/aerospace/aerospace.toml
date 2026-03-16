@@ -296,11 +296,11 @@ run = ['layout floating']
 if.app-name-regex-substring = 'Spotify'
 run = ['layout floating']
 
-[[on-window-detected]]
-if.app-id = "com.mitchellh.ghostty"
-run = [
-  "layout floating",  # 'tiling' does not work
-]
+# [[on-window-detected]]
+# if.app-id = "com.mitchellh.ghostty"
+# run = [
+#   "layout floating",  # 'tiling' does not work
+# ]
 
 # [[on-window-detected]]
 # if.app-id = "net.kovidgoyal.kitty"

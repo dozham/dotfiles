@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -7,60 +7,52 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 zstyle ':omz:update' mode disabled
-
 
 plugins=(git zsh-autosuggestions)
 
 source "$ZSH/oh-my-zsh.sh"
 
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+export PATH="/Users/hossein/.local/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-# Setup zoxide
-eval "$(zoxide init zsh)"
+# Setup ZSH Auto suggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export FZF_DEFAULT_COMMAND='fd --type f'
 
-# My aliases
+eval "$(zoxide init zsh)"
 alias cd=z
+alias cl=clear
+alias sudo='sudo '
 alias vim=nvim
 alias vi=nvim
-alias e=nvim
-alias k=kubectl
-alias icat="kitten icat"
-alias cat=bat
-alias cl=clear
-alias cls=clear
+alias nix-rebuild='darwin-rebuild switch --flake /etc/nix-darwin#m2pro'
 
-# Setup direnv 
+# Setup direnv
 eval "$(direnv hook zsh)"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-
-# Postgres 
-export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
-
-# setting up NVM is slow for some reason
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-. "$HOME/.local/bin/env"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hosseinjafari/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hosseinjafari/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hosseinjafari/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hosseinjafari/google-cloud-sdk/completion.zsh.inc'; fi
 
 # zprof
+
+# pnpm
+export PNPM_HOME="/Users/hossein/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/hossein/.dart-cli-completion/zsh-config.zsh ]] && . /Users/hossein/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

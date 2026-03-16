@@ -44,17 +44,18 @@
 
 font-size = 15
 # theme = catppuccin-<frappe|mocha|macchiato|latte>.conf
-theme = catppuccin-mocha.conf
+# theme = catppuccin-mocha.conf
+# theme = Catppuccin Frappe
 
 keybind = cmd+shift+down=resize_split:down,200
 keybind = cmd+shift+left=resize_split:left,200
 keybind = cmd+shift+up=resize_split:up,200
 keybind = cmd+shift+right=resize_split:right,200
 
-keybind = ctrl+l=goto_split:right
-keybind = ctrl+j=goto_split:down
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+k=goto_split:up
 
 macos-titlebar-style = tabs
 shell-integration = zsh
