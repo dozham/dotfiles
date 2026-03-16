@@ -11,6 +11,7 @@ if status is-interactive
     alias cd="z"
     alias nix-rebuild='darwin-rebuild switch --flake /etc/nix-darwin#m2pro'
     alias zellij="zellij -l welcome"
+    alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
 end
 
 set -gx EDITOR nvim

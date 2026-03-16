@@ -161,10 +161,12 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt ]" { GoToNextTab; }
         bind "Ctrl Alt [" { GoToPreviousTab; }
         bind "Ctrl Alt f" { ToggleFloatingPanes; }
-        bind "Ctrl Alt h" { MoveFocusOrTab "left"; }
+        // bind "Ctrl Alt h" { MoveFocusOrTab "left"; }
+        bind "Ctrl Alt h" { MoveFocus "left"; }
         bind "Ctrl Alt j" { MoveFocus "down"; }
         bind "Ctrl Alt k" { MoveFocus "up"; }
-        bind "Ctrl Alt l" { MoveFocusOrTab "right"; }
+        // bind "Ctrl Alt l" { MoveFocusOrTab "right"; }
+        bind "Ctrl Alt l" { MoveFocus "right"; }
         bind "Ctrl Alt n" { NewPane; }
         bind "Ctrl Alt i" { MoveTab "left"; }
         bind "Ctrl Alt o" { MoveTab "right"; }
