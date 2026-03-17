@@ -4,9 +4,7 @@ if status is-interactive
     direnv hook fish | source
     fzf --fish | source
 
-    alias v="nvim"
-    alias vim="nvim"
-    alias vi="nvim"
+    alias vim="nvim-kickstart"
     alias cl="clear"
     alias cd="z"
     alias nix-rebuild='darwin-rebuild switch --flake /etc/nix-darwin#m2pro'

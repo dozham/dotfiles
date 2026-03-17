@@ -42,10 +42,10 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 15
+font-size = 14
 # theme = catppuccin-<frappe|mocha|macchiato|latte>.conf
 # theme = catppuccin-mocha.conf
-# theme = Catppuccin Frappe
+theme = tokyonight_night
 
 keybind = cmd+shift+down=resize_split:down,200
 keybind = cmd+shift+left=resize_split:left,200
