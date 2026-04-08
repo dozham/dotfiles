@@ -23,3 +23,7 @@ end
 
 starship init fish | source
 
+set -gx ANTHROPIC_API_KEY 'superbock4life'
+set -gx PATH $PATH $HOME/go/bin
+set -gx GPG_TTY (tty)
+

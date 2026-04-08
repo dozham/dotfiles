@@ -45,7 +45,7 @@
 font-size = 14
 # theme = catppuccin-<frappe|mocha|macchiato|latte>.conf
 # theme = catppuccin-mocha.conf
-theme = tokyonight_night
+theme = TokyoNight
 
 keybind = cmd+shift+down=resize_split:down,200
 keybind = cmd+shift+left=resize_split:left,200
@@ -58,5 +58,5 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+k=goto_split:up
 
 macos-titlebar-style = tabs
-shell-integration = zsh
+shell-integration = fish
 
