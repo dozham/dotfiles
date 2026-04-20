@@ -297,10 +297,10 @@ if.app-name-regex-substring = 'Spotify'
 run = ['layout floating']
 
 # [[on-window-detected]]
-# if.app-id = "com.mitchellh.ghostty"
-# run = [
-#   "layout floating",  # 'tiling' does not work
-# ]
+if.app-id = "com.mitchellh.ghostty"
+run = [
+  "layout floating",  # 'tiling' does not work
+]
 
 # [[on-window-detected]]
 # if.app-id = "net.kovidgoyal.kitty"
@@ -328,6 +328,11 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
+run = ['layout floating']
+
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
 run = ['layout floating']
 
 # [[on-window-detected]]
