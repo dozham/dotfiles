@@ -1,0 +1,129 @@
+providers:
+  - id: litellm-wrapper-local
+    name: Lite LLM Wrapper (local)
+    base_url: http://localhost:8000/v1
+    # No api_keys - auth disabled on this wrapper instance.
+    models:
+      - id: claude-sonnet-5
+        name: "Claude Sonnet 5"
+        description: Recommended - best coding model
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-sonnet-4-6
+        name: "Claude Sonnet 4.6"
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-opus-4-6
+        name: "Claude Opus 4.6"
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-opus-4-7
+        name: "Claude Opus 4.7"
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-opus-4-8
+        name: "Claude Opus 4.8"
+        description: Most capable
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-haiku-4-5
+        name: "Claude Haiku 4.5"
+        description: Fast & cheap
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: claude-haiku-4-5-20251001
+        name: "Claude Haiku 4.5 (dated)"
+        context: 200000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: gemini-2.5-pro
+        name: "Gemini 2.5 Pro"
+        context: 1000000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: gemini-3.5-flash
+        name: "Gemini 3.5 Flash"
+        context: 1000000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
+      - id: gemini-3.5-flash-lite
+        name: "Gemini 3.5 Flash Lite"
+        context: 1000000
+        abilities:
+          temperature:
+            supported: true
+          vision:
+            supported: true
+          system_message:
+            supported: true
+          tools:
+            supported: true
