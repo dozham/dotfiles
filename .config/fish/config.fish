@@ -10,6 +10,8 @@ if status is-interactive
     alias nix-rebuild='darwin-rebuild switch --flake /etc/nix-darwin#m2pro'
     alias zellij="zellij -l welcome"
     alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
+    alias k='kubectl'
+    alias c='claude'
 end
 
 set -gx EDITOR nvim
@@ -26,4 +28,4 @@ starship init fish | source
 set -gx ANTHROPIC_API_KEY 'superbock4life'
 set -gx PATH $PATH $HOME/go/bin
 set -gx GPG_TTY (tty)
-
+export PATH="$HOME/.local/bin:$PATH"

@@ -1,0 +1,20 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    pane split_direction="vertical" {
+        pane command="nvim" {
+            args "."
+        }
+
+        pane split_direction="horizontal" size="40%" stacked=true {
+            pane command="claude"
+            pane
+        }
+    }
+
+    pane size=1 borderless=true {
+        plugin location="status-bar"
+    }
+}

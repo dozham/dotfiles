@@ -9,7 +9,7 @@ set linenumber
 set showmode
 set showcmd
 
-set smartcase
+set ignorecase
 set incsearch
 set hlsearch
 
@@ -205,4 +205,9 @@ map <leader>gb <Action>(Git.Branches)
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
+
+nnoremap <C-M-h> <C-w>h
+nnoremap <C-M-j> <C-w>j
+nnoremap <C-M-k> <C-w>k
+nnoremap <C-M-l> <C-w>l
 
