@@ -30,8 +30,8 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # export FZF_DEFAULT_COMMAND='fd --type f'
 
-eval "$(zoxide init zsh)"
-alias cd=z
+# Only init zoxide in interactive shells (fixes Claude Code non-interactive shell errors)
+[[ $- == *i* ]] && eval "$(zoxide init zsh)" && alias cd=z
 alias cl=clear
 alias sudo='sudo '
 alias vim=nvim
